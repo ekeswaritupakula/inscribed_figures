@@ -1,0 +1,143 @@
+\documentclass[10pt]{beamer}
+\usefonttheme{serif}
+\usepackage{bookman}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usecolortheme{orchid}
+\beamertemplateballitem
+% set colors
+\usefonttheme{professionalfonts}
+\usepackage{natbib}
+\usepackage{hyperref}
+%-----------------------------------------------------------
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\medium}
+\setbeamerfont{author}{size=\medium}
+\setbeamerfont{date}{size=\medium}
+\setbeamerfont{institute}{size=\medium}
+\title[]{INSCRIBED FIGURES}
+\author[]{P.Sravanthi: 21B01A5486: AIDS-B\\ \vspace{4} Sk.Kareena: 21BO1A0249:
+EEE\\ \vspace{4}B.kalyani: 21B01A1218: IT-A\\ \vspace{4} T.Ekeswari:
+21B01A12I2: IT-C\\ \vspace{4} S.Bhanu Sri: 22B05A1216: IT-C}
+\date[]
+{MARCH 25, 2023}
+%------------------------------------------------------------
+%This block of commands puts the table of contents at the
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+% \begin{frame}
+% \frametitle{Contents}
+% \tableofcontents[currentsection]
+% \end{frame}
+%}
+\AtBeginSection[]{
+\begin{frame}
+\vfill
+\centering
+\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+\usebeamerfont{title}\insertsectionhead\par%
+\end{beamercolorbox}
+\vfill
+\end{frame}
+}
+%------------------------------------------------------------
+\begin{document}
+%The next statement creates the title page.
+\frame{\titlepage}
+%------------------------------------------------------------
+\begin{frame}{INTRODUCTION: }
+\begin{itemize}
+\item Given a square of length 'n' and four circles of equal radius 'r' inscribed in it where
+each circle is located in each corner and tangent to two sides of the square. we have to
+calculate the area of the largest circle or square that lies completely within the large square and
+intersects all the four circles in atmost four points.
+\end{itemize}
+\end{frame}
+\begin{frame}{If the shape is circle:}
+\includegraphics[width=0.3\linewidth]{circle_inscribed.png}
+\begin{wrapfigure}{\hspace{10} }{\textwidth}
+\caption{}
+\label{fig:wrapfig}
+\end{wrapfigure}
+\begin{itemize}
+\item \\
+The distance from the corner of square to centre of circle,
+OA = DE = √2 r \\ By Pythagoras theorem, \\ OE² = OF² + EF² \\
+OE = √( l² + l² ) \\
+OA + AB + BC + CD + DE = √2l
+\\ √2r + r + x + r + √2r = √2l \\
+x + 2r + 2√2r = √2l \\
+x + 2r(1+ √2) = √2l \\
+x = √2l - 2r(1+ √2) \\
+Here x is the diameter of the required circle \\
+Area of the required circle, \\
+\hspace{17} = 3.14 × ( x/2 ) × ( x/2 )
+\end{itemize}
+\end{frame}
+\begin{frame}{If the shape is square:}
+\includegraphics[width=0.3\linewidth]{square_inscribed.png}
+\begin{wrapfigure}{\hspace{10}}{\textwidth}
+\caption{}
+\label{fig:wrapfig}
+\end{wrapfigure}
+\begin{itemize}
+\item \\
+The distance from the corner of square to centre of circle, \\ x=√2 r \\ By Pythagoras theorem, \\
+OE² = OF² + EF² \\
+OE = √( l² + l² ) \\
+OA + AB + BC + CD + DE = √2l
+\\ √2r + r + x + r + √2r = √2l \\
+x + 2r + 2√2r = √2l \\
+x + 2r(1+ √2) = √2l \\
+x = √2l - 2r(1+ √2) \\
+Here x is the length of diagonal of the required square \\
+Area of the required square = ( x / \sqrt{2} ) × ( x / \sqrt{2} ) \\
+\end{itemize}
+\end{frame}
+
+\begin{frame}{PACKAGES:}
+\begin{itemize}
+\item Math Module: we have imported math module in this project. The math module is a
+built in module that contains a set of math methods and constants. we have used the math
+method "math.sqrt()" to return the square root of a number and the math constant "math.pi" to
+return the value of pi.
+\end{itemize}
+\begin{itemize}
+\item Sys Module: we have imported sys module and used it's variable "sys.argv" which is
+a list of command line arguments. In this project, length, radius and shape are passed as
+command line arguments.
+\end{itemize}
+\end{frame}
+\begin{frame}{CHALLENGES:}
+\begin{itemize}
+\item If the given diameter of the circle exceeds the
+given length of the large square, then all the circles get overlapped and there will be no
+inscribed circle or square that intersects all the four circles in atmost four points.
+\end{itemize}
+\begin{itemize}
+\item To overcome this, we have given the condition that the diameter of the circle should
+be less than the length of the large square
+\end{itemize}
+\end{frame}
+\begin{frame}{STATISTICS: }
+\begin{itemize}
+\item Number of lines of code : 24
+\end{itemize}
+\begin{itemize}
+\item Number of functions : 3 \\ \vspace{3}
+\hspace{5} areaOfCircle( ) \\ \vspace{1} \hspace{5} areaOfSquare( ) \\ \vspace{1} \hspace{5}
+inscribedfigures( )
+\end{itemize}
+\end{frame}
+\begin{frame}{PROGRAM:}
+\includegraphics[width=1.0\textwidth]{code.png}
+\end{frame}
+\begin{frame}{OUTPUT:}
+\includegraphics[width=1.0\textwidth]{output.png}
+\end{frame}
+\begin{frame}
+\textcolor{myNewColorA}{\Huge{\centerline{Thank you!}}}
+\end{frame}
+\end{document}
